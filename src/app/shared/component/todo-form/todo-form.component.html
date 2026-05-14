@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-body">
+        <div class="form-group">
+            <label for="todoItem">Todo</label>
+            <input type="text" #todoItem class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="isCompleted">Is Completed</label>
+            <select  id="isCompleted" #isCompleted class="form-control">
+                <option value="true">Yes</option>
+                 <option value="false">No</option>
+            </select>
+        </div>
+        <button *ngIf="!isInEditMode" class="btn btn-block btn-primary" (click)="onAddTodo()">Add Todo</button>
+        <button *ngIf="isInEditMode" class="btn btn-block btn-danger" (click)="onUpdateTodo()">Update Todo</button>
+    </div>
+</div>

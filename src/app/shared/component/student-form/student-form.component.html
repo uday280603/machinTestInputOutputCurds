@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="card-body">
+    <div class="form-group">
+      <label for="fname">First Name</label>
+      <input type="text" #fname class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="lname">Last Name</label>
+      <input type="text" #lname class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" #email class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="contact">Contact</label>
+      <input type="text" #contact class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="isActive">Is Active</label>
+      <select id="isActive" #isActive class="form-control">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+      </select>
+    </div>
+    <button *ngIf="!isInEditMode" class="btn btn-block btn-primary" (click)="onAddStudent()">Add Student</button>
+    <button *ngIf="isInEditMode" class="btn btn-block btn-danger" (click)="onUpdateStudent()"> Update Student</button>
+  </div>
+</div>
